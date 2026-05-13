@@ -1,11 +1,15 @@
-<section class="min-h-[85vh] flex items-center py-8 px-6">
+---
+import TalkAboutButton from '../components/react/TalkAboutButton.jsx';
+---
 
-    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center w-full">
+<section class="min-h-[85vh] flex items-center py-8 px-5">
+
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center w-full">
 
         <!-- Texto -->
         <div class="max-w-xl mx-auto md:mx-0">
 
-            <span class="bg-black text-white px-3 py-1 rounded">
+            <span class="bg-black text-white px-3 rounded">
                 It's me
             </span>
 
@@ -19,13 +23,12 @@
                 Vázquez
             </h1>
 
-            <p class="mt-5 text-gray-600 text-lg">
-                Full Stack Developer especializado en Laravel y Astro.
+            <p class="mt-10 text-gray-600 text-lg text-justify">
+                Ingeniero de Software con afinidad al desarrollo web y enfoque Full Stack. <br />
+                Me gusta crear aplicaciones escalables y funcionales, combinando diseño intuitivo con soluciones eficientes tanto en frontend como en backend.
             </p>
 
-            <button class="mt-8 bg-red-400 text-white px-6 py-3 rounded-full hover:bg-red-500 transition">
-                Let's Talk
-            </button>
+           <TalkAboutButton client:load />
 
         </div>
 
@@ -35,7 +38,7 @@
             <div class="rounded-2xl overflow-hidden w-[280px] sm:w-[350px] lg:w-[420px]">
 
                 <img
-                    src="/src/assets/HenryEnoch.jpeg"
+                    src="/src/assets/fotos/HenryEnoch.jpeg"
                     alt="profile"
                     class="w-full h-auto object-cover"
                 />

@@ -1,0 +1,36 @@
+---
+const { title = "Contenido en desarrollo" } = Astro.props;
+---
+
+<section class="min-h-[70vh] flex items-center justify-center px-6">
+
+    <div class="bg-white border border-gray-200 rounded-3xl shadow-sm p-10 max-w-xl w-full text-center">
+
+        <!-- Icono -->
+        <div class="w-20 h-20 mx-auto rounded-full bg-yellow-100 flex items-center justify-center mb-6">
+            <i class="fa-solid fa-screwdriver-wrench text-4xl text-yellow-500"></i>
+        </div>
+
+        <!-- Título -->
+        <h1 class="text-3xl md:text-4xl font-black text-gray-900">
+            {title}
+        </h1>
+
+        <!-- Texto -->
+        <p class="mt-4 text-gray-600 text-lg leading-relaxed">
+            Esta sección todavía está en desarrollo. <br />
+            Muy pronto estará disponible con nuevo contenido y proyectos.
+        </p>
+
+        <!-- Botón -->
+        <a
+            href="/"
+            class="inline-flex items-center gap-2 mt-8 bg-red-400 text-white px-5 py-2 rounded-full hover:bg-red-500 transition"
+        >
+            <i class="fa-solid fa-arrow-left"></i>
+            Volver al inicio
+        </a>
+
+    </div>
+
+</section>

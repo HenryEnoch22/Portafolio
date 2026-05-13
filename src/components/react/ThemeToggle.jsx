@@ -18,7 +18,7 @@ export default function ThemeToggle() {
 
         <button
             onClick={() => setDark(!dark)}
-            className="hover:text-gray-600 transition text-lg"
+            className="text-gray-600 hover:text-gray-800 transition text-lg"
         >
 
             <i className={`fa-solid ${dark ? 'fa-sun' : 'fa-moon'}`}></i>
