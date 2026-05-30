@@ -1,11 +1,267 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Staging from '../components/utils/Staging.astro';
-
 ---
 
 <Layout>
 
-    <Staging title="Sobre mí"/>
-    
+    <section class="min-h-screen py-10 px-5">
+        <div class="max-w-6xl mx-auto">
+
+            <!-- Header -->
+            <div class="mb-10">
+                <p class="text-red-400 font-bold tracking-widest text-sm uppercase mb-3">Quién soy</p>
+            </div>
+
+            <!-- Bloque principal -->
+            <div class="grid lg:grid-cols-[1fr_380px] gap-12 items-start">
+
+                <!-- Texto izquierda -->
+                <div>
+
+                    <p class="text-2xl sm:text-3xl font-black leading-snug mb-10 text-justify">
+                        Soy una persona que desde pequeño le llamó demasido la atención la tecnología y desde cuarto semestre de 
+                        universidad me he implicado en el desarrollo activo de software empresarial que tienen como características la 
+                        <span class="text-red-400">rápidez</span>,  <span class="text-red-400">la escalabilidad</span> y una
+                        <span class="text-red-400">experiencia de usuario</span> intuitiva.
+                    </p>
+
+                    <div class="space-y-5 text-gray-500 text-lg leading-relaxed text-justify">
+                        <p>
+                            Estudio Ingeniería de Software en la Universidad Veracruzana, próximo a egresar en junio de 2026. 
+                        </p>
+                        <p>
+                            He trabajado desarrollando sistemas reales tanto trabajando para empresas como de manera independiente.
+                            Lo cual no solo me ha ayudado a aprender sobre el desarrollo del software, sino también del mantenimiento 
+                            y la administración en ambientes de producción reales.
+                        </p>
+                        <p>
+                            Creo que el buen software no se trata solo de que funcione, sino de que sea fácil de 
+                            mantener, agradable de usar y resuelva un problema de verdad.
+                        </p>
+                    </div>
+
+                    <!-- Línea divisora + datos -->
+                    <div class="mt-14 pt-10 border-t border-gray-200 grid grid-cols-3 gap-6">
+                        <div>
+                            <p class="text-4xl font-black">2+</p>
+                            <p class="text-gray-500 text-sm mt-1">Años de experiencia</p>
+                        </div>
+                        <div>
+                            <p class="text-4xl font-black">5+</p>
+                            <p class="text-gray-500 text-sm mt-1">Proyectos realizados</p>
+                        </div>
+                        <div>
+                            <p class="text-4xl font-black text-red-400">UV</p>
+                            <p class="text-gray-500 text-sm mt-1">Universidad Veracruzana</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Derecha: foto + tags -->
+                <div class="flex flex-col gap-6">
+
+                    <!-- Foto -->
+                    <div class="relative">
+                        <div class="rounded-2xl overflow-hidden">
+                            <img
+                                src="/fotos/HenryTraje.png"
+                                alt="Henry Enoch"
+                                class="w-full h-[420px] object-cover object-top"
+                            />
+                        </div>
+                    </div>
+
+
+                    <!-- Derecha: info card -->
+                    <div class="mt-8 bg-white rounded-2xl p-5 shadow-sm flex flex-col gap-4">
+
+                        <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">Información</p>
+
+                        <div class="flex flex-col gap-3">
+
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-400">Ubicación</span>
+                                <span class="text-sm font-medium text-gray-700">Coatzacoalcos, Veracruz 🇲🇽</span>
+                            </div>
+
+                            <div class="w-full h-px bg-gray-100"></div>
+
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-400">Disponibilidad</span>
+                                <span class="text-sm font-medium text-green-500">Disponible tiempo completo</span>
+                            </div>
+
+                            <div class="w-full h-px bg-gray-100"></div>
+
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-400">Modalidad</span>
+                                <span class="text-sm font-medium text-gray-700">Remoto / Híbrido / Presencial</span>
+                            </div>
+
+                            <div class="w-full h-px bg-gray-100"></div>
+
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-400">Enfoque</span>
+                                <span class="text-sm font-medium text-gray-700">Full Stack</span>
+                            </div>
+
+                            <div class="w-full h-px bg-gray-100"></div>
+
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-400">Idiomas</span>
+                                <span class="text-sm font-medium text-gray-700">Español · Inglés intermedio</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Bloque inferior: forma de trabajar -->
+            <div class="mt-24 grid md:grid-cols-3 gap-px bg-gray-200 rounded-2xl overflow-hidden">
+
+                <div class="bg-white p-8">
+                    <p class="text-3xl mb-4">🎯</p>
+                    <h4 class="font-black text-lg mb-2">Orientado a resultados</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed text-justify">
+                        No me conformo con que algo funcione. Me importa que resuelva bien el problema 
+                        para el que fue creado y que quien lo use lo sienta así.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8">
+                    <p class="text-3xl mb-4">⚡</p>
+                    <h4 class="font-black text-lg mb-2">Rápido y adaptable</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed text-justify">
+                        He aprendido que en el desarrollo las cosas cambian seguido: requisitos, 
+                        tecnologías, prioridades. Me adapto a cualquier tipo de cambios.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8">
+                    <p class="text-3xl mb-4">🤝</p>
+                    <h4 class="font-black text-lg mb-2">Colaborativo</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed text-justify">
+                        Trabajo bien solo, pero mejor en equipo. Escucho, propongo y no tengo problema 
+                        en reconocer cuando alguien tiene una mejor idea.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Tecnologías -->
+            <div class="mt-24">
+
+                <p class="text-red-400 font-bold tracking-widest text-sm uppercase mb-3">Stack tecnológico</p>
+                <h2 class="text-3xl font-black mb-12">Tecnologías que manejo</h2>
+
+                <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6">
+
+                    <div class="flex flex-col items-center gap-3 group">
+                        <div class="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center group-hover:bg-red-50 transition-colors">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" class="w-9 h-9" alt="Laravel"/>
+                        </div>
+                        <p class="text-sm font-medium text-gray-600">Laravel</p>
+                    </div>
+
+                    <div class="flex flex-col items-center gap-3 group">
+                        <div class="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center group-hover:bg-red-50 transition-colors">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="w-9 h-9" alt="PHP"/>
+                        </div>
+                        <p class="text-sm font-medium text-gray-600">PHP</p>
+                    </div>
+
+                    <div class="flex flex-col items-center gap-3 group">
+                        <div class="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center group-hover:bg-red-50 transition-colors">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" class="w-9 h-9" alt="Express"/>
+                        </div>
+                        <p class="text-sm font-medium text-gray-600">Express</p>
+                    </div>
+
+                    <div class="flex flex-col items-center gap-3 group">
+                        <div class="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center group-hover:bg-red-50 transition-colors">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-9 h-9" alt="JavaScript"/>
+                        </div>
+                        <p class="text-sm font-medium text-gray-600">JavaScript</p>
+                    </div>
+
+                    <div class="flex flex-col items-center gap-3 group">
+                        <div class="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center group-hover:bg-red-50 transition-colors">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-9 h-9" alt="MySQL"/>
+                        </div>
+                        <p class="text-sm font-medium text-gray-600">MySQL</p>
+                    </div>
+
+                    <div class="flex flex-col items-center gap-3 group">
+                        <div class="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center group-hover:bg-red-50 transition-colors">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" class="w-9 h-9" alt="MongoDB"/>
+                        </div>
+                        <p class="text-sm font-medium text-gray-600">MongoDB</p>
+                    </div>
+
+                    <div class="flex flex-col items-center gap-3 group">
+                        <div class="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center group-hover:bg-red-50 transition-colors">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-9 h-9" alt="React"/>
+                        </div>
+                        <p class="text-sm font-medium text-gray-600">React</p>
+                    </div>
+
+                    <div class="flex flex-col items-center gap-3 group">
+                        <div class="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center group-hover:bg-red-50 transition-colors">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-original.svg" class="w-9 h-9" alt="Astro"/>
+                        </div>
+                        <p class="text-sm font-medium text-gray-600">Astro</p>
+                    </div>
+
+                    <div class="flex flex-col items-center gap-3 group">
+                        <div class="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center group-hover:bg-red-50 transition-colors">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="w-9 h-9" alt="Git"/>
+                        </div>
+                        <p class="text-sm font-medium text-gray-600">Git</p>
+                    </div>
+
+                    <div class="flex flex-col items-center gap-3 group">
+                        <div class="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center group-hover:bg-red-50 transition-colors">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-9 h-9" alt="GitHub"/>
+                        </div>
+                        <p class="text-sm font-medium text-gray-600">GitHub</p>
+                    </div>
+
+                    <div class="flex flex-col items-center gap-3 group">
+                        <div class="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center group-hover:bg-red-50 transition-colors">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" class="w-9 h-9" alt="Docker"/>
+                        </div>
+                        <p class="text-sm font-medium text-gray-600">Docker</p>
+                    </div>
+
+                    <div class="flex flex-col items-center gap-3 group">
+                        <div class="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center group-hover:bg-red-50 transition-colors">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" class="w-9 h-9" alt="Docker"/>
+                        </div>
+                        <p class="text-sm font-medium text-gray-600">Tailwind</p>
+                    </div>
+
+                </div>
+
+                <p class="mt-12 text-gray-500 text-lg mx-auto text-justify mb-8">
+                    Estas son las tecnologías con las que he estado trabajado y con las que me siento cómodo. 
+                    Sin embargo, no me cierro a nada, si un proyecto o equipo requiere algo diferente, 
+                    lo tomo como una oportunidad de seguir creciendo como parte de mi
+                    <span class="text-black font-semibold">aprendizaje constante.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
 </Layout>
+
+<style>
+    .text-outline {
+        -webkit-text-stroke: 3px black;
+        color: transparent;
+    }
+</style>
