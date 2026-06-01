@@ -1,10 +1,37 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Staging from "../components/utils/Staging.astro";
+ import ProjectsGrid from "../components/react/projects/ProjectsGrid";
 ---
 
 <Layout>
 
-    <Staging title="Proyectos"/>
-    
+<section class="min-h-screen py-10 px-5">
+
+    <div class="max-w-6xl mx-auto">
+
+        <div class="mb-10">
+            <p class="text-red-400 font-bold tracking-widest text-sm uppercase mb-3">
+                Mis Proyectos
+            </p>
+
+            <h1 class="text-4xl md:text-5xl font-black mb-6">
+                Proyectos en los que he trabajado
+            </h1>
+
+            <p class="text-lg text-gray-500 leading-relaxed max-w-4xl text-justify">
+                Durante mi formación profesional he participado en el desarrollo
+                de aplicaciones empresariales, sistemas administrativos y plataformas
+                web para distintos tipos de clientes. Cada proyecto me ha permitido
+                fortalecer habilidades relacionadas con arquitectura de software,
+                desarrollo full stack, bases de datos, despliegues y mantenimiento
+                de entornos productivos.
+            </p>
+        </div>
+
+        <ProjectsGrid client:load />
+
+    </div>
+
+</section>
+
 </Layout>
