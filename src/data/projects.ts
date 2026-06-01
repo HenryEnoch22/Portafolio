@@ -119,7 +119,7 @@ export const projects: Project[] = [
 
         logo: "/projects/maternico/MaternicoLogo.jpg",
 
-        shortDescription:"Aplicación móvil diseñada para acompalar a las madres primerizas en el cuidado y seguimiento de sus bebés.",
+        shortDescription:"Aplicación móvil diseñada para acompañar a las madres primerizas en el cuidado y seguimiento de sus bebés.",
 
         description: `
             Maternico es una aplicación móvil desarrollada por un equipo multidisciplinario integrado por estudiantes de Ingeniería de Software, Contaduría y Gestión de Negocios de la Universidad Veracruzana. El proyecto surgió como una iniciativa de emprendimiento para competir en eventos organizados por ANFECA a nivel regional y nacional, combinando conocimientos tecnológicos, administrativos y financieros para desarrollar una solución con impacto social.
@@ -170,7 +170,7 @@ export const projects: Project[] = [
 
         logo: "/projects/imprenta/ImprentaVazquezLogo.jpg",
 
-        shortDescription:"Plataforma web e gestión de solicitudes de impresión que permite a los clientes solicitar trabajos desde casa y dar seguimiento a su proceso, mientras el administrador gestiona cada etapa.",
+        shortDescription:"Plataforma web de gestión de solicitudes de impresión que permite a los clientes solicitar trabajos desde casa y dar seguimiento a su proceso, mientras el administrador gestiona cada etapa.",
 
         description: `
             Es una plataforma web diseñada para digitalizar y centralizar la operación de una imprenta. El administrador es el encargado de registrar manualmente a los clientes en el sistema, quienes una vez con acceso pueden ingresar desde cualquier lugar y crear solicitudes de trabajo de impresión sin necesidad de acudir físicamente al local.
