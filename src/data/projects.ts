@@ -34,7 +34,6 @@ export const projects: Project[] = [
             "MySQL",
             "Blade",
             "Liviwire",
-            "Bootstrap",
         ],
 
         role: "Desarrollador Full Stack",
@@ -54,8 +53,9 @@ export const projects: Project[] = [
         ],
 
         images: [
-            "/projects/transporte-1.png",
-            "/projects/transporte-2.png"
+            "/projects/gpc/EquipoDeTransporte.jpeg",
+            "/projects/gpc/ReporteDeViajes.jpeg",
+            "/projects/gpc/ReporteFinancieroUnidades.jpeg"
         ],
 
         github: null,
@@ -66,13 +66,12 @@ export const projects: Project[] = [
         id: 2,
         name: "Rotomfit",
 
-        logo: "/projects/rotomfit/RotomfitLogo.jpg",
+        logo: "/projects/rotomfit/RotomfitLogo_cropped.jpg",
 
         shortDescription:"Plataforma web para gestión de pacientes, citas, rutinas terapéuticas, contenido especializado y venta de productos.",
 
         description: `
-            RotomFit es una plataforma web desarrollada para optimizar la gestión de una clínica de la rehabilitación física. El sistema centraliza la administración de pacientes, el agendamiento de citas, la creación de rutinas terapéuticas personalizadas 
-            y la publicación de contenido informativo para los usuarios.
+            RotomFit es una plataforma web desarrollada para optimizar la gestión de una clínica de la rehabilitación física. El sistema centraliza la administración de pacientes, el agendamiento de citas, la creación de rutinas terapéuticas personalizadas y la publicación de contenido informativo para los usuarios.
 
             Además, incorpora un módulo de comercio electrónico para el apartado de productos relacionados con la terapia física, permitiendo a los administradores gestionar inventario, pedidos y entregas desde una misma plataforma. 
             El objetivo principal del proyecto es facilitar el seguimiento de los pacientes y mejorar la organización de los procesos clínicos y administrativos.
@@ -133,7 +132,6 @@ export const projects: Project[] = [
             "Laravel",
             "MySQL",
             "React Native",
-            "Expo Go",
         ],
 
         role: "Desarrollador Backend",

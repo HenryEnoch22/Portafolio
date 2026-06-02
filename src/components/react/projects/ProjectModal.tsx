@@ -62,17 +62,17 @@ export default function ProjectModal({
                 </div>
 
                 <div className="mb-8">
-                    <h3 className="font-bold mb-3">
+                    <h3 className="font-bold">
                         Descripción
                     </h3>
 
-                    <p className="text-gray-500 leading-relaxed whitespace-pre-line">
+                    <p className="text-gray-500 leading-relaxed whitespace-pre-line text-justify">
                         {project.description}
                     </p>
                 </div>
 
                 <div className="mb-8">
-                    <h3 className="font-bold mb-3">
+                    <h3 className="font-bold mb-5">
                         Tecnologías
                     </h3>
 
