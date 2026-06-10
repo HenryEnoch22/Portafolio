@@ -1,7 +1,7 @@
 ---
 import ThemeToggle from '../react/ThemeToggle.jsx';
 
-const pathname = Astro.url.pathname;
+const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
 ---
 
 <header class="bg-white border-b border-gray-200">
