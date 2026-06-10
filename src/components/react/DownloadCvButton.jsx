@@ -1,7 +1,7 @@
 export default function downloadCV() {
     return (
         <a
-            href="/cv/CV_Henry_Enoch_Francisco_Vazquez.pdf"
+            href="/cv/Henry_Enoch_Francisco_Vazquez_CV.pdf"
             download
             className="
                 inline-block
