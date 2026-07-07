@@ -25,7 +25,7 @@ export default function ThemeToggle() {
         relative w-9 h-9 flex items-center justify-center
         text-gray-500 dark:text-gray-400
         hover:text-gray-800 dark:hover:text-gray-200
-        hover:bg-gray-100 dark:hover:bg-gray-800
+        hover:bg-gray-100 dark:hover:bg-gray-800 hover:ring-2 hover:ring-blue-500/50
         rounded-lg transition text-lg
       "
       aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}

@@ -37,7 +37,7 @@ export default function ProjectCard({
                         rounded-xl
                         object-contain
                         border border-gray-200 dark:border-gray-600
-                        bg-white dark:bg-gray-700
+                        bg-white dark:bg-white
                         p-2
                         group-hover:scale-105 transition-transform
                     "
@@ -66,8 +66,8 @@ export default function ProjectCard({
                         key={tech}
                         className="
                             px-3 py-1
-                            bg-red-50 dark:bg-red-900/30
-                            text-red-500 dark:text-red-400
+                            bg-blue-50 dark:bg-blue-900/30
+                            text-blue-600 dark:text-blue-400
                             rounded-full
                             text-sm
                             font-medium

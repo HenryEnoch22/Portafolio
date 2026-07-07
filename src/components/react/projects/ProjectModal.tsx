@@ -58,7 +58,7 @@ export default function ProjectModal({
                             w-8 h-8 flex items-center justify-center
                             rounded-lg
                             text-gray-400 dark:text-gray-500
-                            hover:text-red-400 dark:hover:text-red-400
+                            hover:text-blue-600 dark:hover:text-blue-400
                             hover:bg-gray-100 dark:hover:bg-gray-700
                             transition cursor-pointer
                         "
@@ -91,8 +91,8 @@ export default function ProjectModal({
                                 className="
                                     px-3 py-1
                                     rounded-full
-                                    bg-red-50 dark:bg-red-900/30
-                                    text-red-500 dark:text-red-400
+                                    bg-blue-50 dark:bg-blue-900/30
+                                    text-blue-600 dark:text-blue-400
                                     text-sm
                                 "
                             >
@@ -112,7 +112,7 @@ export default function ProjectModal({
 
                         {project.features.map((feature) => (
                             <li key={feature} className="flex items-start gap-2">
-                                <span className="text-red-400 mt-1">•</span>
+                                <span className="text-blue-600 mt-1">•</span>
                                 {feature}
                             </li>
                         ))}
@@ -155,7 +155,7 @@ export default function ProjectModal({
                             </a>
                         )}
                         {project.demo && (
-                            <a href={project.demo} target="_blank" className="inline-flex items-center gap-2 bg-red-400 hover:bg-red-500 text-white px-5 py-2 rounded-full transition text-sm font-semibold">
+                            <a href={project.demo} target="_blank" className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-full transition text-sm font-semibold">
                                 <i className="fa-solid fa-arrow-up-right-from-square"></i>
                                 Demo
                             </a>

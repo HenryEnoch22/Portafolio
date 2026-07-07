@@ -10,7 +10,7 @@ export default function DownloadCVButton() {
       className="
         inline-flex items-center gap-2
         mt-8
-        bg-red-400 hover:bg-red-500
+        bg-blue-500 hover:bg-blue-700
         text-white
         px-7 py-3
         rounded-full
