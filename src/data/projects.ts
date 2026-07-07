@@ -1,5 +1,8 @@
+export type ProjectKey = 'erpGpc' | 'rotomfit' | 'maternico' | 'imprenta';
+
 export interface Project {
     id: number;
+    translationKey: ProjectKey;
     name: string;
     logo: string;
     shortDescription: string;
@@ -15,6 +18,7 @@ export interface Project {
 export const projects: Project[] = [
     {
         id: 1,
+        translationKey: "erpGpc",
         name: "ERP GPC Logística",
 
         logo: "/projects/gpc/CuboGPC.jpeg",
@@ -64,6 +68,7 @@ export const projects: Project[] = [
 
     {
         id: 2,
+        translationKey: "rotomfit",
         name: "Rotomfit",
 
         logo: "/projects/rotomfit/RotomfitLogo_cropped.jpg",
@@ -114,6 +119,7 @@ export const projects: Project[] = [
 
     {
         id: 3,
+        translationKey: "maternico",
         name: "Maternico",
 
         logo: "/projects/maternico/MaternicoLogo.jpg",
@@ -164,6 +170,7 @@ export const projects: Project[] = [
 
      {
         id: 4,
+        translationKey: "imprenta",
         name: "Imprenta Vázquez",
 
         logo: "/projects/imprenta/ImprentaVazquezLogo.jpg",

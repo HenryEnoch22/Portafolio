@@ -12,6 +12,7 @@ export default function ProjectModal({
 }: ProjectModalProps) {
 
     const { t } = useLanguage();
+    const p = (t.projects as any)[project?.translationKey];
 
     if (!project) return null;
 
@@ -44,11 +45,11 @@ export default function ProjectModal({
 
                     <div>
                         <h2 className="text-3xl font-black text-gray-900 dark:text-white">
-                            {project.name}
+                            {p?.name ?? project.name}
                         </h2>
 
                         <p className="text-gray-500 dark:text-gray-400 mt-2">
-                            {project.role}
+                            {p?.role ?? project.role}
                         </p>
                     </div>
 
@@ -74,7 +75,7 @@ export default function ProjectModal({
                     </h3>
 
                     <p className="text-gray-500 dark:text-gray-400 leading-relaxed whitespace-pre-line text-justify">
-                        {project.description}
+                        {p?.description ?? project.description}
                     </p>
                 </div>
 
@@ -110,8 +111,8 @@ export default function ProjectModal({
 
                     <ul className="space-y-2 text-gray-500 dark:text-gray-400">
 
-                        {project.features.map((feature) => (
-                            <li key={feature} className="flex items-start gap-2">
+                        {(p?.features ?? project.features).map((feature: string, i: number) => (
+                            <li key={i} className="flex items-start gap-2">
                                 <span className="text-blue-600 mt-1">•</span>
                                 {feature}
                             </li>

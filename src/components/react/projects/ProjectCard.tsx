@@ -1,4 +1,5 @@
 import type { Project } from "../../../data/projects";
+import { useLanguage } from "../../../i18n/store";
 
 interface ProjectCardProps {
     project: Project;
@@ -9,6 +10,8 @@ export default function ProjectCard({
     project,
     onOpen
 }: ProjectCardProps) {
+    const { t } = useLanguage();
+    const p = (t.projects as any)[project.translationKey];
     return (
         <button
             onClick={() => onOpen(project)}
@@ -45,18 +48,18 @@ export default function ProjectCard({
 
                 <div>
                     <h3 className="text-xl font-black text-gray-900 dark:text-white">
-                        {project.name}
+                        {p?.name ?? project.name}
                     </h3>
 
                     <p className="text-sm text-gray-400 dark:text-gray-500">
-                        {project.role}
+                        {p?.role ?? project.role}
                     </p>
                 </div>
 
             </div>
 
             <p className="text-gray-500 dark:text-gray-400 mb-5 text-justify leading-relaxed">
-                {project.shortDescription}
+                {p?.shortDescription ?? project.shortDescription}
             </p>
 
             <div className="flex flex-wrap gap-2">
