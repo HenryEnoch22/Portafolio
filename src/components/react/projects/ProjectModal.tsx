@@ -1,4 +1,5 @@
 import type { Project } from "../../../data/projects";
+import { useLanguage } from "../../../i18n/store";
 
 interface ProjectModalProps {
     project: Project | null;
@@ -10,40 +11,43 @@ export default function ProjectModal({
     onClose
 }: ProjectModalProps) {
 
+    const { t } = useLanguage();
+
     if (!project) return null;
 
     return (
         <div
             className="
-                fixed
-                inset-0
-                bg-black/60
+                fixed inset-0
+                bg-black/60 dark:bg-black/80
                 z-50
-                flex
-                items-center
-                justify-center
+                flex items-center justify-center
                 p-5
+                backdrop-blur-sm
             "
+            onClick={onClose}
         >
             <div
                 className="
-                    bg-white
+                    bg-white dark:bg-gray-800
                     rounded-3xl
                     max-w-4xl
                     w-full
                     max-h-[90vh]
                     overflow-y-auto
                     p-8
+                    shadow-2xl
                 "
+                onClick={(e) => e.stopPropagation()}
             >
                 <div className="flex justify-between items-start mb-8">
 
                     <div>
-                        <h2 className="text-3xl font-black">
+                        <h2 className="text-3xl font-black text-gray-900 dark:text-white">
                             {project.name}
                         </h2>
 
-                        <p className="text-gray-500 mt-2">
+                        <p className="text-gray-500 dark:text-gray-400 mt-2">
                             {project.role}
                         </p>
                     </div>
@@ -51,29 +55,32 @@ export default function ProjectModal({
                     <button
                         onClick={onClose}
                         className="
-                            text-2xl
-                            cursor-pointer
-                            hover:text-red-400
+                            w-8 h-8 flex items-center justify-center
+                            rounded-lg
+                            text-gray-400 dark:text-gray-500
+                            hover:text-red-400 dark:hover:text-red-400
+                            hover:bg-gray-100 dark:hover:bg-gray-700
+                            transition cursor-pointer
                         "
                     >
-                        ✕
+                        <i className="fa-solid fa-xmark text-xl"></i>
                     </button>
 
                 </div>
 
                 <div className="mb-8">
-                    <h3 className="font-bold">
-                        Descripción
+                    <h3 className="font-bold text-gray-900 dark:text-white mb-3">
+                        {t.projects.modalDescription}
                     </h3>
 
-                    <p className="text-gray-500 leading-relaxed whitespace-pre-line text-justify">
+                    <p className="text-gray-500 dark:text-gray-400 leading-relaxed whitespace-pre-line text-justify">
                         {project.description}
                     </p>
                 </div>
 
                 <div className="mb-8">
-                    <h3 className="font-bold mb-5">
-                        Tecnologías
+                    <h3 className="font-bold text-gray-900 dark:text-white mb-5">
+                        {t.projects.technologies}
                     </h3>
 
                     <div className="flex flex-wrap gap-2">
@@ -82,11 +89,11 @@ export default function ProjectModal({
                             <span
                                 key={tech}
                                 className="
-                                    px-3
-                                    py-1
+                                    px-3 py-1
                                     rounded-full
-                                    bg-red-50
-                                    text-red-400
+                                    bg-red-50 dark:bg-red-900/30
+                                    text-red-500 dark:text-red-400
+                                    text-sm
                                 "
                             >
                                 {tech}
@@ -97,15 +104,16 @@ export default function ProjectModal({
                 </div>
 
                 <div className="mb-8">
-                    <h3 className="font-bold mb-3">
-                        Funcionalidades
+                    <h3 className="font-bold text-gray-900 dark:text-white mb-3">
+                        {t.projects.features}
                     </h3>
 
-                    <ul className="space-y-2 text-gray-500">
+                    <ul className="space-y-2 text-gray-500 dark:text-gray-400">
 
                         {project.features.map((feature) => (
-                            <li key={feature}>
-                                • {feature}
+                            <li key={feature} className="flex items-start gap-2">
+                                <span className="text-red-400 mt-1">•</span>
+                                {feature}
                             </li>
                         ))}
 
@@ -114,8 +122,8 @@ export default function ProjectModal({
 
                 {project.images.length > 0 && (
                     <div>
-                        <h3 className="font-bold mb-4">
-                            Capturas
+                        <h3 className="font-bold text-gray-900 dark:text-white mb-4">
+                            {t.projects.screenshots}
                         </h3>
 
                         <div className="grid md:grid-cols-2 gap-4">
@@ -127,8 +135,9 @@ export default function ProjectModal({
                                     alt={project.name}
                                     className="
                                         rounded-xl
-                                        border
-                                        border-gray-200
+                                        border border-gray-200 dark:border-gray-700
+                                        w-full
+                                        object-cover
                                     "
                                 />
                             ))}
@@ -136,6 +145,23 @@ export default function ProjectModal({
                         </div>
                     </div>
                 )}
+
+                {project.github || project.demo ? (
+                    <div className="mt-8 flex gap-4 pt-6 border-t border-gray-100 dark:border-gray-700">
+                        {project.github && (
+                            <a href={project.github} target="_blank" className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition font-medium">
+                                <i className="fa-brands fa-github"></i>
+                                GitHub
+                            </a>
+                        )}
+                        {project.demo && (
+                            <a href={project.demo} target="_blank" className="inline-flex items-center gap-2 bg-red-400 hover:bg-red-500 text-white px-5 py-2 rounded-full transition text-sm font-semibold">
+                                <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                                Demo
+                            </a>
+                        )}
+                    </div>
+                ) : null}
 
             </div>
         </div>

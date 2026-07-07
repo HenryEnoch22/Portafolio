@@ -3,6 +3,7 @@ import '../styles/global.css';
 import Navbar from '../components/navbar/Navbar.astro';
 import Sidebar from '../components/sidebar/Sidebar.astro';
 import Footer from '../components/footer/Footer.astro';
+import { translations } from '../i18n/translations';
 ---
 
 <!doctype html>
@@ -10,22 +11,26 @@ import Footer from '../components/footer/Footer.astro';
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" /> -->
 		<link rel="icon" href="/LogoHenry-Negro.svg" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 		<meta name="generator" content={Astro.generator} />
-		<title>Mi portafolio</title>
+		<title>Henry Enoch Francisco Vázquez</title>
+		<script is:inline>
+			(function() {
+				var theme = localStorage.getItem("theme");
+				if (theme === "dark" || (!theme && matchMedia("(prefers-color-scheme: dark)").matches)) {
+					document.documentElement.classList.add("dark");
+				}
+			})();
+		</script>
 	</head>
 
-	<body class="min-h-screen bg-gray-100">
+	<body class="min-h-screen bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
 
 		<div class="flex min-h-screen">
 
-			<!-- Sidebar -->
 			<Sidebar />
 
-			<!-- Contenido -->
 			<div class="flex-1 flex flex-col ml-12">
 
 				<Navbar />
@@ -43,3 +48,34 @@ import Footer from '../components/footer/Footer.astro';
 	</body>
 
 </html>
+
+<script define:vars={{ translations }}>
+	const t = translations;
+
+	function applyTranslations(lang) {
+		const keys = t[lang] || t.es;
+		document.querySelectorAll("[data-i18n]").forEach((el) => {
+			const path = el.dataset.i18n.split(".");
+			let val = keys;
+			for (const key of path) {
+				val = val?.[key];
+			}
+			if (val) el.textContent = val;
+		});
+	}
+
+	function init() {
+		const lang = localStorage.getItem("lang") || "es";
+		document.documentElement.lang = lang;
+		applyTranslations(lang);
+		document.documentElement.addEventListener("languagechange", (e) => {
+			applyTranslations(e.detail);
+		});
+	}
+
+	if (document.readyState === "loading") {
+		document.addEventListener("DOMContentLoaded", init);
+	} else {
+		init();
+	}
+</script>

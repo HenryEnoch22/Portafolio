@@ -10,18 +10,11 @@ import {
 
 export default function ProjectsGrid() {
 
-    const [selectedProject, setSelectedProject] =useState<Project | null>(null);
+    const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
     return (
         <>
-            <div
-                className="
-                    grid
-                    md:grid-cols-2
-                    xl:grid-cols-3
-                    gap-6
-                "
-            >
+            <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
                 {projects.map((project) => (
                     <ProjectCard
                         key={project.id}
